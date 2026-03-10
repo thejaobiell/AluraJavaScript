@@ -1,0 +1,28 @@
+@url = http://localhost:3000
+
+### Listar livros
+GET {{url}}/livros
+
+### Adicionar livro
+POST {{url}}/livros
+Content-Type: application/json
+
+{
+    "titulo": "O LIVRO",
+    "autor": "69af7775fe35ecda580f5426"
+}
+### Listar um livro por EDITORA
+GET {{url}}/livros/busca?editora={{query}}
+@query = Classicos
+
+
+###-------------------------------------------------------
+
+###
+POST {{url}}/autores
+Content-Type: application/json
+
+{
+    "nome": "J.R.R. Tolkien",
+    "nacionalidade": "Inglês"
+}
